@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Demo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "nav nav"
+                "sidebar content";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 70px 50px auto;
+            height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            font-size: 22px;
+        }
+
+        nav {
+            grid-area: nav;
+            background: #555;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        .content {
+            grid-area: content;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>My Website Name</header>
+
+<nav>
+    Home | About | Contact
+</nav>
+
+<div class="sidebar">
+    <h3>Side Menu</h3>
+    <p>Menu item 1</p>
+    <p>Menu item 2</p>
+    <p>Menu item 3</p>
+</div>
+
+<div class="content">
+    <h2>Main Content</h2>
+    <p>This is where your main content goes.</p>
+</div>
+
+</body>
+</html>
